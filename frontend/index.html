@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tréxinho - Diagnóstico de Eletrônicos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Diagnóstico com IA - Tréxinho</h1>
+        
+        <form id="analysis-form">
+            <div class="form-step">
+                <label for="category">1. Escolha o seu item:</label>
+                <select id="category" name="category" required>
+                    <option value="Computador">Computador</option>
+                    <option value="Monitor">Monitor</option>
+                    <option value="Notebook">Notebook</option>
+                    <option value="Celular">Celular</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="form-step">
+                <label for="image">2. Coloque uma foto do seu item:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+            </div>
+
+            <button type="submit">Analisar Item</button>
+        </form>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Estou analisando seu item, já já trago o diagnóstico eletrônico!</p>
+        </div>
+
+        <div id="result-container" class="hidden">
+            <h2>Diagnóstico do Tréxinho:</h2>
+            <p id="diagnosis-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

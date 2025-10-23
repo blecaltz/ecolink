@@ -1,5 +1,3 @@
-/* frontend/style.css */
-/* Adicione estilos básicos para centralizar, spinners, etc. */
 body { font-family: sans-serif; background-color: #121212; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; }
 .container { width: 90%; max-width: 400px; background-color: #1e1e1e; padding: 2em; border-radius: 8px; }
 .form-step { margin-bottom: 1.5em; }

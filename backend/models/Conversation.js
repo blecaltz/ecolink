@@ -1,16 +1,14 @@
-// backend/models/Conversation.js
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
-const MessageSchema = new mongoose.Schema({
-  sender: { type: String, required: true }, // 'user' | 'trexinho'
-  text: { type: String, required: true },
-  createdAt: { type: Date, default: Date.now }
+const conversationSchema = new mongoose.Schema({
+  userId: String,
+  messages: [
+    {
+      sender: String, // "user" ou "trexinho"
+      text: String,
+      timestamp: { type: Date, default: Date.now }
+    }
+  ]
 });
 
-const ConversationSchema = new mongoose.Schema({
-  userId: { type: String, required: true },
-  messages: [MessageSchema],
-  createdAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('Conversation', ConversationSchema);
+export default mongoose.model("Conversation", conversationSchema);

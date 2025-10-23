@@ -1,22 +1,10 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
-const AnalysisSchema = new mongoose.Schema({
-    category: {
-        type: String,
-        required: true
-    },
-    prompt: {
-        type: String,
-        required: true
-    },
-    analysisResult: {
-        type: String,
-        required: true
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }
+const analysisSchema = new mongoose.Schema({
+  category: String,
+  prompt: String,
+  analysisResult: String,
+  createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Analysis', AnalysisSchema);
+export default mongoose.model("Analysis", analysisSchema);
